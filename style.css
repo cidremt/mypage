@@ -25,7 +25,9 @@ body {
 	white-space: normal;
 }
 
-a,
+a {
+    color: black;
+}
 
 a:visited {
 	text-decoration: none;
@@ -681,7 +683,8 @@ footer{
     vertical-align: middle;
 }
 .footer_text{
-    color : white;
+    color : rgb(181, 179, 179);
+    font-size: 0.8rem;
 }
 ul.footer-menu li {
     display: inline;
