@@ -21,7 +21,7 @@ body {
 
 body {
 	line-height: 1.5;
-	white-space: pre-wrap;
+	white-space: normal;
 }
 
 a,
@@ -47,7 +47,7 @@ h3 {
 .page-title {
 	font-size: 2.5rem;
 	font-weight: 700;
-	margin-top: -0.95em;
+	margin-top: -0.5em;
 	margin-bottom: 0em;
 }
 
@@ -354,7 +354,7 @@ img.icon {
 
 .page-header-icon-with-cover {
 	margin-top: -0.72em;
-	margin-left: 0.07em;
+	margin-left: 0.2em;
 }
 
 .page-header-icon img {
