@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memo</title>
     <link rel="stylesheet" href="../styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const footer = document.querySelector('footer');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.body.classList.add('at-bottom');
+                    } else {
+                        document.body.classList.remove('at-bottom');
+                    }
+                });
+            }, { threshold: 1.0 });
+
+            const sentinel = document.createElement('div');
+            sentinel.style.height = '1px';
+            document.querySelector('main').appendChild(sentinel);
+            observer.observe(sentinel);
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -12,11 +31,29 @@
     </header>
     <main>
         <p>以下のPDFをご覧ください。</p>
-        <iframe src="../Schwinger-Keldysh_formalism_I.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        <div class = "pdf">
+        <iframe src="../Schwinger-Keldysh_formalism_I.pdf" width="90%" height="600px" style="border: none;"></iframe>
+        </div>
+
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <p>以下のPDFをご覧ください。</p>
+        <br></br>
+        <br></br>
+        <br></br>
     </main>
     <footer>
         <p><a href="../index.html">ホームに戻る</a></p>
-        <p>&copy; 2025 シンプルサイト</p>
+        <p>Twitter: <a href="https://x.com/cidremt">@cidremt</a></p>
     </footer>
 </body>
 </html>
