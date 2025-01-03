@@ -20,8 +20,35 @@
             color: white;
             padding: 1em 0;
             text-align: center;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            transition: bottom 0.5s ease;
+        }
+        body.at-bottom footer {
+            bottom: 0;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const footer = document.querySelector('footer');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.body.classList.add('at-bottom');
+                    } else {
+                        document.body.classList.remove('at-bottom');
+                    }
+                });
+            }, { threshold: 1.0 });
+
+            const sentinel = document.createElement('div');
+            sentinel.style.height = '1px';
+            document.body.appendChild(sentinel);
+            observer.observe(sentinel);
+        });
+    </script>
 </head>
 <body>
     <header>
